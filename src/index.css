@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode Base */
+    --background: 220 25% 97%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 1rem;
+
+    /* Game Theme Variables - Dark Gamer */
+    --gamer-bg: 0 0% 8%;
+    --gamer-fg: 0 0% 95%;
+    --gamer-primary: 0 85% 55%;
+    --gamer-accent: 30 100% 50%;
+    --gamer-grid: 0 0% 15%;
+    --gamer-glow: 0 85% 55%;
+
+    /* Game Theme Variables - Light Minimal */
+    --minimal-bg: 200 30% 98%;
+    --minimal-fg: 220 20% 20%;
+    --minimal-primary: 200 70% 60%;
+    --minimal-accent: 160 60% 55%;
+    --minimal-grid: 200 20% 92%;
+    --minimal-glow: 200 70% 70%;
+
+    /* Game Theme Variables - Normal */
+    --normal-bg: 240 15% 94%;
+    --normal-fg: 240 20% 18%;
+    --normal-primary: 240 60% 55%;
+    --normal-accent: 280 55% 60%;
+    --normal-grid: 240 12% 88%;
+    --normal-glow: 240 60% 65%;
+
+    /* Animation Variables */
+    --particle-speed: 20s;
+    --glow-intensity: 0.5;
+  }
+
+  .dark {
+    /* Dark Mode Base */
+    --background: 220 25% 10%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 220 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 280 65% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 220 70% 55%;
+
+    /* Dark Mode Game Themes Adjusted */
+    --gamer-bg: 0 0% 5%;
+    --gamer-fg: 0 0% 98%;
+    --minimal-bg: 200 20% 12%;
+    --minimal-fg: 200 10% 90%;
+    --normal-bg: 240 15% 8%;
+    --normal-fg: 240 10% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes particle-float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -30px) rotate(120deg); }
+    66% { transform: translate(-20px, 20px) rotate(240deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+  }
+
+  @keyframes celebrate {
+    0% { transform: scale(0) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+  }
+
+  @keyframes slide-in {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes grid-appear {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-particle {
+    animation: particle-float var(--particle-speed) linear infinite;
+  }
+
+  .animate-celebrate {
+    animation: celebrate 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.4s ease-out forwards;
+  }
+
+  .animate-grid-appear {
+    animation: grid-appear 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+}
