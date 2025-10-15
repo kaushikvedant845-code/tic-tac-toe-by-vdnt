@@ -1,0 +1,23 @@
+Build a Tic Tac Toe grid in HTML/CSS with styled buttons that change color when clicked, design a modern interactive ui , add some animations when game ends and player win / loose, add some background animation in slow pace, also designing it more interesting by making dynamic animation when game starting and winning , in background add some minimal effects while playing but should be smooth and a soothing vibe.  
+
+
+
+ also before starting the game add two options of grid selection  
+
+ 1st option- 3x3 grid  
+
+ 2nd option - 5x5 grid  
+
+ and on the same page as a multitask add 3 options for game theme . 
+
+ where theme means ,based on game background & overall look like  
+
+ 1st option - dark and agrresive gamer style and intense animation but not the overdone   
+
+ 2nd option - light and lovable theme style for minimal and soothing style animations in pace and to lighten up the mood relaxing. 
+
+ 3rd option - normal animated background in slow pace should be minimal too background should be soothing but not more than 2nd option.  
+
+ and also add one more button on the right top - for night mode . when turned on then theme gets dark for night and when off theme gets light for day mode .  by deffault keep it off AND let user select if want to.
+
+Also add one more button go back to home page whenever the player want to go  back to home page ,  but when player select the button for home page then before redirecting it to go there show a popup if "are you sure to go back"  "yes/No"  and make larger icons for tic tac
